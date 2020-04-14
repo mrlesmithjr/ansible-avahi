@@ -5,7 +5,8 @@
 # services, containing a cookie value which is chosen randomly on daemon startup
 avahi_add_service_cookie: false
 
-avahi_allow_interfaces: []
+avahi_allow_interfaces:
+  []
   # - eth0
   # - enp0s3
   # - enp0s8
@@ -17,7 +18,8 @@ avahi_alpine_packages:
 
 # list of browsing domains (in addition to the default one and those announced
 # inside the default browsing domain).
-avahi_browse_domains: []
+avahi_browse_domains:
+  []
   # - 0pointer.de
   # - zeroconf.org
 
@@ -51,7 +53,8 @@ avahi_enable_reflector: false
 avahi_enable_wide_area: true
 
 # define static host name to IP address mappings for multicast DNS
-avahi_hosts: []
+avahi_hosts:
+  []
   # - host: router.local
   #   ip: 192.168.0.1
 
@@ -68,7 +71,8 @@ avahi_publish_aaaa_on_ipv4: true
 avahi_publish_addresses: true
 
 # You can use this to announce unicast DNS servers via mDNS.
-avahi_publish_dns_servers: []
+avahi_publish_dns_servers:
+  []
   # - 192.168.50.1
   # - 192.168.50.2
 
@@ -114,7 +118,8 @@ avahi_rlimit_nproc: 3
 
 avahi_rlimit_stack: 4194304
 
-avahi_services: {}
+avahi_services:
+  {}
   # ipp:
   #   type: _ipp._tcp
   #   subtype: _colour._sub._ipp._tcp

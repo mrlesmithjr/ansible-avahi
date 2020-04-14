@@ -8,8 +8,7 @@
 
 - name: redhat | Installing Avahi Packages
   yum:
-    name: "{{ item }}"
+    name: "{{ avahi_redhat_packages }}"
     state: present
   become: true
-  with_items: "{{ avahi_redhat_packages }}"
   when: ansible_distribution != "Fedora"
