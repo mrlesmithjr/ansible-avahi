@@ -1,3 +1,11 @@
+commit 1791e0dbee476f6b727d938a251907be3e9224e3
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Mon Apr 13 20:08:28 2020 -0400
+
+    Added new files, tests, etc from Cookiecutter template
+    
+    These new files, etc. are from Cookiecutter template for Ansible roles.
+
 commit 9cde390df2ebb24423a0b676eb53c400c03074fb
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Mon Apr 13 20:08:22 2020 -0400
