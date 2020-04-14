@@ -1,3 +1,13 @@
+commit 3c834644713a4b2394bc088da192c3f9bcc99d1a
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Mon Apr 13 20:13:48 2020 -0400
+
+    Changed package installs to be compliant
+    
+    These changes ensure that package installs are not install using loops
+    
+    Closes #1
+
 commit 1791e0dbee476f6b727d938a251907be3e9224e3
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Mon Apr 13 20:08:28 2020 -0400
