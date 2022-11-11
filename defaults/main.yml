@@ -133,6 +133,13 @@ avahi_services:
   #   type: _ssh._tcp
   #   port: 22
   #   state: absent
+  # adisk:
+  #   type: _adisk._tcp
+  #   port: 9
+  #   txt:
+  #     - dk0=adVN=backups,adVF=0x82
+  #     - sys=adVF=0x100
+  #   state: present
 
 avahi_use_ipv4: true
 

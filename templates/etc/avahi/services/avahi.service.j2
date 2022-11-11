@@ -9,5 +9,10 @@
     <subtype>{{ item['value']['subtype'] }}</subtype>
 {%     endif %}
     <port>{{ item['value']['port'] }}</port>
+{%     if item['value']['txt'] is defined %}
+{%       for txtRecord in item['value']['txt'] %}
+    <txt-record>{{ txtRecord }}</txt-record>
+{%       endfor %}
+{%     endif %}
   </service>
 </service-group>
