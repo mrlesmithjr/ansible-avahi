@@ -1,6 +1,6 @@
 ---
 - name: debian | Installing Avahi Packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ avahi_debian_packages }}"
     state: present
   become: true

@@ -1,6 +1,6 @@
 ---
 - name: config | Configuring avahi-daemon
-  template:
+  ansible.builtin.template:
     src: etc/avahi/avahi-daemon.conf.j2
     dest: /etc/avahi/avahi-daemon.conf
     mode: u=rw,g=r,o=r
@@ -11,7 +11,7 @@
     - restart avahi-daemon
 
 - name: config | Configuring Avahi hosts
-  template:
+  ansible.builtin.template:
     src: etc/avahi/hosts.j2
     dest: /etc/avahi/hosts
     mode: u=rw,g=r,o=r
@@ -22,7 +22,7 @@
     - restart avahi-daemon
 
 - name: config | Removing Avahi Service
-  file:
+  ansible.builtin.file:
     path: "/etc/avahi/services/{{ item['key'] }}.service"
     state: absent
   become: true
@@ -30,12 +30,12 @@
     - restart avahi-daemon
   with_dict: "{{ avahi_services }}"
   when: >
-        avahi_services is defined and
-        avahi_services != {} and
-        item['value']['state']|lower == "absent"
+    avahi_services is defined and
+    avahi_services != {} and
+    item['value']['state']|lower == "absent"
 
 - name: config | Configuring Avahi Services
-  template:
+  ansible.builtin.template:
     src: etc/avahi/services/avahi.service.j2
     dest: /etc/avahi/services/{{ item['key'] }}.service
     mode: u=rw,g=r,o=r
@@ -46,6 +46,6 @@
     - restart avahi-daemon
   with_dict: "{{ avahi_services }}"
   when: >
-        avahi_services is defined and
-        avahi_services != {} and
-        item['value']['state']|lower == "present"
+    avahi_services is defined and
+    avahi_services != {} and
+    item['value']['state']|lower == "present"

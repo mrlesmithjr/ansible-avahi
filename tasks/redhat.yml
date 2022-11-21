@@ -1,13 +1,13 @@
 ---
 - name: redhat | Enabling EPEL Repo
-  yum:
+  ansible.builtin.yum:
     name: epel-release
     state: present
   become: true
   when: ansible_distribution != "Fedora"
 
 - name: redhat | Installing Avahi Packages
-  yum:
+  ansible.builtin.yum:
     name: "{{ avahi_redhat_packages }}"
     state: present
   become: true
