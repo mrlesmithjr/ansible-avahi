@@ -4,4 +4,4 @@
   tasks:
     - name: Include ansible_avahi
       ansible.builtin.include_role:
-        name: ansible_avahi
+        name: ansible-avahi
