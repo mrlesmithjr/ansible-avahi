@@ -1,5 +1,9 @@
 ---
 # tasks file for ansible-avahi
+- name: Alpine related tasks
+  ansible.builtin.include_tasks: alpine.yml
+  when: ansible_os_family == "Alpine"
+
 - name: Debian related tasks
   ansible.builtin.include_tasks: debian.yml
   when: ansible_os_family == "Debian"
