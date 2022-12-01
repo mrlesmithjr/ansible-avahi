@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: Include ansible_avahi
+    - name: Include ansible-avahi
       ansible.builtin.include_role:
         name: ansible-avahi
